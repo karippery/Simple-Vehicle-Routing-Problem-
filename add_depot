@@ -1,0 +1,18 @@
+depot_xaxis= 25
+depot_yaxis= 35
+for idx, row in enumerate(location):
+    #print(len(location))
+    #print(customer_number)
+    x, y = [], []
+    for x_, y_ in row:                                                                                          
+        x.append(x_)
+        y.append(y_)
+        x.sort()
+        y.sort()
+    x.insert(cromosome_len,40)
+    y.insert(cromosome_len,40)
+    x.insert(0,40)
+    y.insert(0,40)
+    #print(x)
+    #print(y)
+    plt.plot(x, y, label=idx)
